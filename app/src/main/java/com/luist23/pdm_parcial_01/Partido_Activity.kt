@@ -20,7 +20,7 @@ class Partido_Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_partido)
 
-        partido = (Persona) Json(intent.putExtras("partido"))
+        partido = intent.putExtras("partido")
 
 
         scoreViewModel = ViewModelProviders.of(this)
