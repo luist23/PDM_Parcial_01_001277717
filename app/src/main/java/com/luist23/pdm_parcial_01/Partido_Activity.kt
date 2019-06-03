@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.aldana.ejemplo14.ScoreViewModel
@@ -11,16 +12,16 @@ import com.luist23.pdm_parcial_01.database.entities.Partido
 import com.squareup.moshi.Json
 import kotlinx.android.synthetic.main.activity_partido.*
 
-class Partido_Activity : AppCompatActivity() {
+class Partido_Activity : AppCompatActivity(), LifecycleOwner {
     lateinit var scoreViewModel: ScoreViewModel
-    lateinit var partido = Partido
+    //lateinit var partido = Partido
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_partido)
 
-        partido = intent.putExtras("partido")
+        //partido = //intent.putExtras("partido")
 
 
         scoreViewModel = ViewModelProviders.of(this)
