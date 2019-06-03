@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewPartidoActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+
+    <TextView
+        android:layout_margin="25sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Iniciar Nuevo Partido"
+        android:textSize="25sp"/>
+
+    <LinearLayout
+        android:layout_margin="25sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Equipo A:  "/>
+        <EditText
+            android:id="@+id/et_equipo_A"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:hint="Nombre de Equipo A"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_margin="25sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Equipo B:  "/>
+        <EditText
+            android:id="@+id/et_equipo_B"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:hint="Nombre de Equipo B"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha"/>
+    <LinearLayout
+        android:padding="25sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Dia:"/>
+        <EditText
+            android:id="@+id/et_fecha_dia"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:hint="Dia"/>
+        <TextView
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Mes:"/>
+        <EditText
+            android:id="@+id/et_fecha_mes"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:hint="Mes"/>
+        <TextView
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Año:"/>
+        <EditText
+            android:id="@+id/et_fecha_año"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:hint="Año"/>
+    </LinearLayout>
+
+    <LinearLayou
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Hora :   "/>
+        <EditText
+            android:id="@+id/et_hora"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:hint="del 1 al 24"/>
+    </LinearLayou>
+
+
+    <Button
+        android:layout_margin="25sp"
+        android:id="@+id/bt_iniciar_partido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iniciar Partido"/>
+
+
+</LinearLayout>
