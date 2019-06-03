@@ -11,6 +11,7 @@ import com.aldana.ejemplo14.ScoreViewModel
 import com.luist23.pdm_parcial_01.database.entities.Partido
 import com.squareup.moshi.Json
 import kotlinx.android.synthetic.main.activity_partido.*
+import kotlinx.android.synthetic.main.activity_partido.view.*
 
 class Partido_Activity : AppCompatActivity(), LifecycleOwner {
     lateinit var scoreViewModel: ScoreViewModel
@@ -46,13 +47,9 @@ class Partido_Activity : AppCompatActivity(), LifecycleOwner {
         scoreViewModel.scoreTeamB.setValue(0)
 
 
-        // TODO: El ViewModel es restaurado si ya existía, si no, se crea uno nuevo.
-        // TODO: Recuerde que el ViewModel solo sobrevive a cambios de configuración y no a la destrucción de la aplicación
-
     }
 
 
-    // TODO: Accediendo y modificando datos almacenados en el ViewModel según el método utilizado
 
     fun addOneTeamA(v: View) {
         scoreViewModel.scoreTeamA.value = scoreViewModel.scoreTeamA.value?.plus(1)
@@ -79,9 +76,9 @@ class Partido_Activity : AppCompatActivity(), LifecycleOwner {
     }
 
     fun saveScores(v: View) {
-        scoreViewModel.scoreTeamA.value = 0
-        scoreViewModel.scoreTeamB.value = 0
-    } // TODO: Limpiando datos
+        scoreViewModel.partido.value?.puntosA = v.tv_score_team_a.text.toString().toInt()
+        scoreViewModel.partido.value?.puntosB = v.tv_score_team_a.text.toString().toInt()
+    }
 
     fun displayScore(v: TextView, score: Int) {
         v.text = score.toString()
